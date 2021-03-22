@@ -2,19 +2,34 @@
 
 /* 共通のスタイル */
 .w720 {
-	@media only screen and (min-width: 1201px) {
+	@media only screen and (min-width: 801px) {
 		max-width: 720px;
-		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
-	@media only screen and (max-width: 1200px) {
-		width: 100%;
+	// @media only screen and (max-width: 800px) {
+	// 	width: 100%;
+	// }
+}
+
+.w800 {
+	@media only screen and (min-width: 1001px) {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media only screen and (max-width: 1000px) {
+		width: 70vw;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
 .w1000 {
 	@media only screen and (min-width: 1201px) {
 		max-width: 1000px;
-		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	@media only screen and (max-width: 1200px) {
 		padding-left: 8.33vw;
@@ -25,7 +40,8 @@
 .w1200 {
 	@media only screen and (min-width: 1201px) {
 		max-width: 1200px;
-		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	@media only screen and (max-width: 1200px) {
 		width: 100%;
@@ -55,17 +71,17 @@
 	@include transition-all;
 	cursor: pointer;
 
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: 50%;
-		right: 2em;
-		width: 1em;
-		height: 0.58em;
-		border-bottom: 1px solid #191919;
-		border-right: 2px solid #191919;
-		@include transform(skew(30deg) rotate(-30deg) translateY(50%));
-	}
+	// &::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	bottom: 50%;
+	// 	right: 2em;
+	// 	width: 1em;
+	// 	height: 0.58em;
+	// 	border-bottom: 1px solid #191919;
+	// 	border-right: 2px solid #191919;
+	// 	@include transform(skew(30deg) rotate(-30deg) translateY(50%));
+	// }
 
 	// &:before {
 	//     content: '';
@@ -147,7 +163,7 @@ section.hero {
 .section-title {
 	margin-bottom: 60px;
 	@media only screen and (max-width: 768px) {
-		font-size: $font-size-xxxxl-sp;
+		font-size: $font-size-xxxxxl-sp;;
 		margin-bottom: 2.5em;
 	}
 
@@ -159,6 +175,7 @@ section.hero {
 		}
 		font-weight: 700;
 		color: $color-section-title;
+		line-height: 1.3;
 
 		> span {
 			font-family: $font-sans;
@@ -217,7 +234,7 @@ section.hero {
     	font-family: $font-ryumin-pro;
 	    font-size: $font-size-xxxxl;
 		@media only screen and (max-width: 768px) {
-			font-size: $font-size-xxxxl-sp;
+			font-size: $font-size-xxxxxl-sp;;
 		}
 		line-height: 1.9;
 	    // margin-bottom: 0.76em;
@@ -227,7 +244,7 @@ section.hero {
 		font-family: $font-ryumin-pro;
 		font-size: $font-size-xxxxxxl;
 		@media only screen and (max-width: 768px) {
-			font-size: $font-size-xxxxxxl-sp;
+			font-size: $font-size-xxxxxxxl-sp;
 		}
 		line-height: 1.3;
 		font-weight: 500;
@@ -358,7 +375,7 @@ section.hero {
 							padding-top: 1.7em;
 						}
 						@media only screen and (max-width: 768px) {
-							font-size: $font-size-xxxxxxxl-sp;
+							font-size: $font-size-xxxxxxxxl-sp;
 						}
 						line-height: 1.02;
 						letter-spacing: -0.03em;
@@ -538,8 +555,8 @@ section.hero {
 	position: relative;
 	padding-top: 100px;
 	@media only screen and (max-width: 768px) {
-		padding-left: 10vw;
-		padding-right: 10vw;
+		// padding-left: 10vw;
+		// padding-right: 10vw;
 		padding-top: 8vw;
 	}
 
@@ -594,7 +611,7 @@ section.hero {
 
 				a {
 					font-family: $font-sans;
-					font-size: $font-size-l;
+					font-size: $font-size-xxl;
 					line-height: 6;
 					background: $color-transparent;
 					color: $color-black;
@@ -609,7 +626,7 @@ section.hero {
 						@include justify-content-center;
 					}
 					@media only screen and (max-width: 768px) {
-						font-size: $font-size-button-sp;
+						font-size: $font-size-xxxl-sp;
 						line-height: 1.3;
 					}
 
@@ -645,11 +662,16 @@ section.hero {
 				}
 
 				.name {
+					display: block;
+					margin-top: -80px;
+					padding-top: 80px;
 					font-family: $font-sans;
 					font-weight: 600;
 					font-size: $font-size-xxxl;
 					@media only screen and (max-width: 768px) {
-						font-size: $font-size-xxxxl-sp;
+						font-size: $font-size-xxxxxl-sp;
+						margin-top: -20vw;
+						padding-top: 20vw;
 					}
 				}
 
@@ -714,15 +736,16 @@ section.hero {
 					.img {
 						@include flex(50%);
 						padding-right: 20px;
-						border-radius: 10px;
+						// border-radius: 10px;
 						img {
 							width: 100%;
+							border-radius: 10px;
 							@media only screen and (max-width: 768px) {
 								width: 60%;
 							}
 
 							&:hover {
-								@include transform(scale(1.05));
+								// @include transform(scale(1.05));
 							}
 						}
 					}
@@ -738,7 +761,7 @@ section.hero {
 							margin-bottom: 1em;
 							display: block;
 							@media only screen and (max-width: 768px) {
-								font-size: $font-size-xxxxl-sp;
+								font-size: $font-size-xxxxxl-sp;;
 								margin-top: 1em;
 							}
 						}
@@ -829,7 +852,7 @@ section.hero {
 							@media only screen and (max-width: 768px) {
 								font-size: $font-size-button-sp;
 								max-width: 70vw;
-								margin: 2em auto 0;
+								margin: 1em auto 0;
 							}
 
 							&::after {
@@ -979,5 +1002,1020 @@ section.hero {
 		background: center center url(../img/img08.png) no-repeat;
 		background-size: cover;
 		z-index: -1;
+	}
+}
+
+.breadcrumb {
+	@extend .w1000;
+	position: relative;
+	top: 70px;
+	font-size: $font-size-breadcrumb;
+	padding-top: 2em;
+	padding-bottom: calc(70px + 2em);
+	@media only screen and (max-width: 768px) {
+		font-size: $font-size-breadcrumb-sp;
+	}
+	@media only screen and (max-width: 768px) {
+		padding-left: 5.33vw;
+		padding-right: 5.33vw;
+		top: 18.67vw;
+	}
+
+	.section-content {
+		ul {
+			list-style: none;
+
+			li {
+				display: inline;
+				font-family: $font-sans;
+				font-size: inherit;
+				color: $color-gray1 !important;
+
+				+li:before {
+					padding: 8px;
+					color: black;
+					content: ">";
+				}
+
+				a {
+					color: $color-gray1 !important;
+
+					&:hover {
+						color: $color-gray1 !important;
+						text-decoration: underline !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.main-image {
+	.section-title h3 {
+		margin-top: 1em;
+		text-align: center;
+	}
+
+	.section-content {
+		.main-image {
+			overflow: hidden;
+			@include display-flex;
+			@include justify-content-center;
+
+			.img {
+				margin: 0 auto;
+				max-width: unset;
+			}
+		}
+
+		.intro {
+			p {
+				font-family: $font-family-text;
+				text-align: center;
+				font-size: $font-size-intro;
+				line-height: 2;
+				margin-top: 3em;
+				@media only screen and (max-width: 768px) {
+					font-size: $font-size-intro-sp;
+					line-height: 1.5;
+					margin-top: 2em;
+				}
+			}
+		}
+	}
+}
+
+.greeting {
+	@extend .w1000;
+
+	padding-top: 100px;
+	@media only screen and (max-width: 768px) {
+		padding-top: 12vw;
+		padding-left: 5.33vw;
+		padding-right: 5.33vw;
+	}
+
+	.section-title h3 {
+		font-family: $font-family-text;
+		font-weight: bold;
+		text-align: left;
+		font-size: $font-size-xxxl;
+		line-height: 2.5;
+		border-bottom: 1px dotted $color-gray3;
+		@media only screen and (max-width: 768px) {
+			font-size: $font-size-xxxxxxl-sp;
+		}
+	}
+	.section-content {
+		@extend .w800;
+		@include display-flex;
+		@media only screen and (max-width: 768px) {
+			@include flex-direction-column;
+			width: 100%;
+		}
+		
+		.ceo {
+			@include flex(40%);
+			max-width: 40%;
+			padding-right: 2em;
+			@media only screen and (max-width: 768px) {
+				@include flex(100%);
+				max-width: 100%;
+				text-align: center;
+				padding-right: unset;
+				.img {
+					margin: 0 auto;
+				}
+			}
+		}
+		.message {
+			@include flex(60%);
+			max-width: 60%;
+			@media only screen and (max-width: 768px) {
+				@include flex(100%);
+				max-width: 100%;
+				padding-top: 6vw;
+			}
+			.txt {
+				font-family: $font-family-text;
+				font-weight: 400;
+				font-size: $font-size-normal;
+				line-height: 2;
+				margin-bottom: 1em;
+				@media only screen and (max-width: 768px) {
+					font-size: $font-size-xxxxl-sp;
+					line-height: 1.5;
+				}
+
+				&:last-of-type {
+					margin-bottom: 2em;
+				}
+			}
+			.name-position {
+				@include display-flex;
+				p {
+					margin-left: auto;
+					.position {
+						font-family: $font-noto-serif;
+						font-weight: 700;
+						font-size: $font-size-xxl;
+						line-height: 1;
+						@media only screen and (max-width: 768px) {
+							font-size: $font-size-xxxxxl-sp;
+							line-height: 1;
+						}
+						display: block;
+						margin-bottom: 0.8em;
+					}
+					.name {
+						font-family: $font-noto-serif;
+						font-weight: 700;
+						font-size: $font-size-xxxxl;
+						line-height: 1;
+						@media only screen and (max-width: 768px) {
+							font-size: $font-size-xxxxxxl-sp;
+							line-height: 1;
+						}
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+.report {
+	@extend .w1000;
+
+	padding-top: 100px;
+	@media only screen and (max-width: 768px) {
+		padding-top: 12vw;
+		padding-left: 5.33vw;
+		padding-right: 5.33vw;
+	}
+
+	.top-links {
+		@include display-flex;
+		@include flex-wrap-wrap;
+		@include justify-content-space-between;
+
+		> .item {
+			@include flex(24%);
+			max-width: 24%;
+			text-align: center;
+			font-size: $font-size-xxl;
+			border-radius: 1.65em;
+			@media only screen and (max-width: 1024px) {
+				border-radius: 2em;
+			}
+			@media only screen and (max-width: 768px) {
+				@include flex(48%);
+				max-width: 48%;
+				font-size: $font-size-xxxl-sp;
+
+				&:nth-child(n + 3) {
+					margin-top: 0.5em;
+				}
+			}
+
+			a {
+				font-family: $font-sans;
+				font-size: $font-size-xxl;
+				line-height: 3.3;
+				background: $color-gray4;
+				color: $color-black;
+				width: 100%;
+				display: block;
+				border-radius: 1.65em;
+				position: relative;
+
+				@media only screen and (max-width: 1024px) {
+					line-height: 1.3;
+					height: 4em;
+					@include display-flex;
+					@include align-items-center;
+					@include justify-content-center;
+					border-radius: 2em;
+				}
+				@media only screen and (max-width: 768px) {
+					font-size: $font-size-xxxl-sp;
+					line-height: 1.3;
+				}
+
+				&:hover {
+					background: $color-blue2;
+					color: white;
+					border-radius: 1.65em;
+					@media only screen and (max-width: 1024px) {
+						border-radius: 2em;
+					}
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					right: 2em;
+					top: 50%;
+					height: 0.5em;
+					width: 0.5em;
+					border-right: 1px solid #191919;
+					border-bottom: 1px solid #191919;
+					border-color: inherit;
+					transform: rotate(45deg) translateY(-100%);
+				}
+			}
+
+			&.selected {
+				a {
+					background: $color-blue2;
+					color: white;
+					border-radius: 1.65em;
+				}
+			}
+		}
+	}
+
+	.detail-item {
+		padding-top: 90px;
+		padding-left: 60px;
+		@media only screen and (max-width: 768px) {
+			padding-top: 12vw;
+			padding-left: unset;
+		}
+
+		h4 {
+			display: block;
+			margin-top: -80px;
+			padding-top: 80px;
+			@media only screen and (max-width: 768px) {
+				margin-top: -20vw;
+				padding-top: 20vw;
+			}
+
+			font-size: $font-size-xxxl;
+			line-height: 1.16;
+			@media only screen and (max-width: 768px) {
+				font-size: $font-size-xxxxxxl-sp;
+			}
+		}
+		p {
+			font-size: $font-size-xl;
+			line-height: 1.75;
+			margin-top: 2.5em;
+			@media only screen and (max-width: 768px) {
+				font-size: $font-size-xxxxl-sp;
+			}
+		}
+	}
+}
+
+.headquarter {
+	@extend .w1000;
+
+	padding-top: 100px;
+	@media only screen and (max-width: 768px) {
+		padding-top: 12vw;
+		padding-left: 5.33vw;
+		padding-right: 5.33vw;
+	}
+
+	.section-title h3 {
+		font-family: $font-family-text;
+		font-weight: bold;
+		text-align: left;
+		font-size: $font-size-xxxl;
+		line-height: 2.5;
+		border-bottom: 1px dotted $color-gray3;
+		@media only screen and (max-width: 768px) {
+			font-size: $font-size-xxxxxxl-sp;
+		}
+	}
+
+	.section-content {
+		.office {
+			@extend .w800;
+			@include display-flex;
+			@media only screen and (max-width: 768px) {
+				@include flex-direction-column;
+				width: 100%;
+			}
+
+			.building-image {
+				@include flex(40%);
+				max-width: 40%;
+				padding-right: 2em;
+				@media only screen and (max-width: 768px) {
+					@include flex(100%);
+					max-width: 100%;
+					text-align: center;
+					padding-right: unset;
+					.img {
+						margin: 0 auto;
+					}
+				}
+			}
+			.info {
+				margin-bottom: 1em;
+				&:last-of-type {
+					margin-bottom: unset;
+				}
+
+				@include flex(60%);
+				max-width: 60%;
+				@media only screen and (max-width: 768px) {
+					@include flex(100%);
+					max-width: 100%;
+					padding-top: 6vw;
+				}
+				.item {
+					@include display-flex;
+					margin-bottom: 1em;
+
+					.field-name {
+						@include flex(20%);
+						font-size: $font-size-normal;
+						@media only screen and (max-width: 768px) {
+							font-size: $font-size-xxxxl-sp;
+						}
+						min-width: 6em;
+
+						span {
+							font-family: $font-family-text;
+							font-weight: 700;
+							font-size: $font-size-normal;
+							line-height: 2;
+							margin-bottom: 1em;
+							@media only screen and (max-width: 768px) {
+								font-size: $font-size-xxxxl-sp;
+								line-height: 1.5;
+							}
+						}
+					}
+					.field-value {
+						@include flex(80%);
+						p {
+							font-family: $font-family-text;
+							font-weight: 400;
+							font-size: $font-size-normal;
+							line-height: 2;
+							@media only screen and (max-width: 768px) {
+								font-size: $font-size-xxxxl-sp;
+								line-height: 1.5;
+							}
+						}
+					}
+				}
+			}
+		}
+		.map {
+			@extend .w800;
+			margin-top: 100px;
+			@media only screen and (max-width: 768px) {
+				margin-top: 10vw;
+				width: 100%;
+			}
+
+			.txt {
+				.item {
+					@include display-flex;
+					margin-top: 1em;
+
+					&:first-of-type {
+						margin-top: 2em;
+					}
+
+					.field-name {
+						@include flex(5%);
+						min-width: 4em;
+						font-size: $font-size-normal;
+						@media only screen and (max-width: 768px) {
+							font-size: $font-size-xxxxl-sp;
+						}
+
+						span {
+							font-family: $font-family-text;
+							font-weight: 700;
+							font-size: $font-size-normal;
+							line-height: 2;
+							margin-bottom: 1em;
+							@media only screen and (max-width: 768px) {
+								font-size: $font-size-xxxxl-sp;
+								line-height: 1.5;
+							}
+						}
+					}
+					.field-value {
+						@include flex(97%);
+						span {
+							font-family: $font-family-text;
+							font-weight: 400;
+							font-size: $font-size-normal;
+							line-height: 2;
+							@media only screen and (max-width: 768px) {
+								font-size: $font-size-xxxxl-sp;
+								line-height: 1.5;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.history {
+	@extend .w1000;
+
+	padding-top: 100px;
+	padding-bottom: 100px;
+	@media only screen and (max-width: 768px) {
+		padding-top: 12vw;
+		padding-left: 5.33vw;
+		padding-right: 5.33vw;
+		padding-bottom: 18vw;
+	}
+
+	.section-title h3 {
+		font-family: $font-family-text;
+		font-weight: bold;
+		text-align: left;
+		font-size: $font-size-xxxl;
+		line-height: 2.5;
+		border-bottom: 1px dotted $color-gray3;
+		@media only screen and (max-width: 768px) {
+			font-size: $font-size-xxxxxxl-sp;
+		}
+	}
+
+	.section-content {
+		@extend .w800;
+		@media only screen and (max-width: 768px) {
+			width: 100%;
+		}
+
+		.item {
+			@include display-flex;
+			margin-top: 3em;
+
+			&:first-of-type {
+				margin-top: 2em;
+			}
+
+			.field-name {
+				@include flex(20%);
+				font-size: $font-size-normal;
+				@media only screen and (max-width: 768px) {
+					font-size: $font-size-xxxxl-sp;
+				}
+
+				span {
+					font-family: $font-family-text;
+					font-weight: 700;
+					font-size: $font-size-normal;
+					line-height: 2;
+					margin-bottom: 1em;
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-xxxxl-sp;
+						line-height: 1.5;
+					}
+				}
+			}
+			.field-value {
+				@include flex(80%);
+				span {
+					font-family: $font-family-text;
+					font-weight: 400;
+					font-size: $font-size-normal;
+					line-height: 2;
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-xxxxl-sp;
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+	}
+}
+
+.recruitment-links {
+	// @extend .w720;
+	max-width: 800px;
+	@media only screen and (max-width: 1200px) {
+		max-width: 66vw;
+	}
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 60px;
+	@media only screen and (max-width: 768px) {
+		padding-top: 10vw;
+	}
+
+	.section-content {
+		@include display-flex;
+		@include justify-content-space-between;
+		@include flex-wrap-wrap;
+
+		.item {
+			font-family: $font-sans;
+			font-weight: 500;
+			font-size: $font-size-xxl;
+			@media only screen and (max-width: 768px) {
+				font-size: $font-size-button-sp;
+				max-width: 70vw;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			line-height: 1.1;
+			text-align: center;
+			border-radius: 2.5em;
+			margin-bottom: 1.2em;
+
+			@include flex(48%);
+			max-width: 48%;
+			@media only screen and (max-width: 768px) {
+				@include flex(100%);
+				max-width: 70vw;
+			}
+			background: $color-blue2;
+			color: $color-white;
+
+			&:hover {
+				color: $color-blue2;
+				background: $color-gray4;
+			}
+
+			a {
+				font-size: inherit;
+				line-height: 5;
+				color: inherit;
+				position: relative;
+				@media only screen and (max-width: 768px) {
+					line-height: 4;
+				}
+
+				&::after {
+					content: '';
+					position: absolute;
+					right: -1.5em;
+					top: 50%;
+					height: 0.5em;
+					width: 0.5em;
+					border-right: 1px solid #191919;
+					border-bottom: 1px solid #191919;
+					border-color: inherit;
+					transform: rotate(45deg) translateY(-100%);
+				}
+			}
+		}
+	}
+}
+
+.new-graduate, .career {
+	@extend .w1000;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	@media only screen and (max-width: 768px) {
+		padding-top: 12vw;
+		padding-left: 5.33vw;
+		padding-right: 5.33vw;
+		padding-bottom: 18vw;
+	}
+
+	.section-title h3 {
+		font-family: $font-family-text;
+		font-weight: bold;
+		text-align: left;
+		font-size: $font-size-xxxl;
+		line-height: 2.5;
+		border-bottom: 1px dotted $color-gray3;
+		display: block;
+		margin-top: -80px;
+		padding-top: 80px;
+
+		@media only screen and (max-width: 768px) {
+			font-size: $font-size-xxxxxxl-sp;
+			margin-top: -20vw;
+			padding-top: 20vw;
+		}
+	}
+
+	.section-content {
+		padding-left: 60px;
+		padding-right: 60px;
+		@media only screen and (max-width: 768px) {
+			padding-left: 5vw;
+			padding-right: 5vw;
+		}
+
+		h4 {
+			font-family: $font-family-text;
+			font-weight: bold;
+			font-size: $font-size-xxl;
+			line-height: 2;
+			padding-bottom: 1em;
+			padding-left: 1.5em;
+			position: relative;
+
+			@media only screen and (max-width: 768px) {
+				font-size: $font-size-xxxxxl-sp;
+				line-height: 1.5;
+			}
+
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				height: 1em;
+				width: 1em;
+				left: 0;
+				top: 1em;
+				transform: translateY(-50%);
+				background: $color-blue2;
+			}
+
+			&:nth-of-type(n + 2) {
+				margin-top: 100px;
+				@media only screen and (max-width: 768px) {
+					margin-top: 10vw;
+				}
+			}
+		}
+
+		.item {
+			font-family: $font-family-text;
+			font-weight: 400;
+			font-size: $font-size-normal;
+			line-height: 2;
+			@media only screen and (max-width: 768px) {
+				font-size: $font-size-xxxxl-sp;
+				line-height: 1.5;
+			}
+
+			@include display-flex;
+			margin-top: 1.5em;
+
+			&:first-of-type {
+				margin-top: 2em;
+			}
+
+			.field-name {
+				@include flex(20%);
+				min-width: 6em;
+				font-size: $font-size-normal;
+				@media only screen and (max-width: 768px) {
+					font-size: $font-size-xxxxl-sp;
+				}
+
+				span {
+					font-family: $font-family-text;
+					font-weight: 700;
+					font-size: $font-size-normal;
+					line-height: 2;
+					margin-bottom: 1em;
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-xxxxl-sp;
+						line-height: 1.5;
+					}
+				}
+			}
+			.field-value {
+				@include flex(80%);
+				span {
+					font-family: $font-family-text;
+					font-weight: 400;
+					font-size: $font-size-normal;
+					line-height: 2;
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-xxxxl-sp;
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+	}
+}
+
+.inquiry {
+
+	padding-top: 100px;
+	@media only screen and (max-width: 768px) {
+		padding-top: 12vw;
+		padding-left: 5.33vw;
+		padding-right: 5.33vw;
+	}
+
+	.section-title h3 {
+		text-align: center;
+	}
+
+	.section-content {
+		@extend .w1000;
+		padding-bottom: 150px;
+		margin-bottom: 100px;
+
+		@media only screen and (max-width: 768px) {
+			padding-bottom: 20vw;
+			padding-left: unset;
+			padding-right: unset;
+			margin-bottom: 10vw;
+		}
+
+		.intro {
+			p {
+				font-family: $font-family-text;
+				text-align: center;
+				font-size: $font-size-intro;
+				line-height: 2;
+				margin-top: 1em;
+				margin-bottom: 3em;
+				@media only screen and (max-width: 768px) {
+					font-size: $font-size-intro-sp;
+					line-height: 1.5;
+					margin-top: 1em;
+					margin-bottom: 1em;
+				}
+
+				i {
+					font-style: normal;
+					color: $color-red;
+				}
+			}
+		}
+
+		.contents {
+			background: $color-gray4;
+			padding-top: 60px;
+			padding-bottom: 60px;
+			border-radius: 10px;
+			padding-left: 10%;
+			padding-right: 10%;
+			@media only screen and (max-width: 768px) {
+				padding-top: 8vw;
+				padding-bottom: 8vw;
+				margin-top: 8vw;
+				padding-left: unset;
+				padding-right: unset;
+			}
+		}
+
+		.agree-terms {
+			font-family: $font-family-text;
+			font-weight: 400;
+			font-size: $font-size-normal;
+			line-height: 1.5;
+			text-align: center;
+			@include display-flex;
+			@include flex-direction-column;
+			margin-top: 2em;
+
+			@media only screen and (max-width: 768px) {
+				font-size: $font-size-xxxxl-sp;
+			}
+
+			.checkbox-label {
+				line-height: 2;
+				margin: 0 auto;
+			}
+
+			a {
+				text-decoration: underline !important;
+				line-height: 2;
+
+				&:hover {
+					text-decoration: none !important;
+				}
+			}
+		}
+
+		.item {
+			@extend .w720;
+
+			font-family: $font-family-text;
+			font-weight: 400;
+			font-size: $font-size-normal;
+			line-height: 2;
+
+			@include display-flex;
+			@include align-items(baseline);
+			margin-top: 1.5em;
+
+			&:first-of-type {
+				margin-top: unset;
+			}
+
+			@media only screen and (max-width: 768px) {
+				font-size: $font-size-xxxxl-sp;
+				line-height: 1.5;
+				padding-left: 5.33vw;
+				padding-right: 5.33vw;
+				@include flex-direction-column;
+				@include align-items-flex-start;
+			}
+
+			.field-name {
+				@include flex(30%);
+				min-width: 15em;
+				font-size: $font-size-normal;
+				@media only screen and (max-width: 768px) {
+					font-size: $font-size-xxxxl-sp;
+					margin-bottom: 0.8em;
+				}
+
+				span {
+					font-family: $font-family-text;
+					font-weight: 700;
+					font-size: $font-size-normal;
+					line-height: 2;
+					margin-bottom: 1em;
+
+					i {
+						font-style: normal;
+						color: $color-red;
+					}
+
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-xxxxl-sp;
+						line-height: 1.5;
+					}
+				}
+			}
+			.field-value {
+				@include flex(70%);
+				@media only screen and (max-width: 768px) {
+					width: 100%;
+				}
+
+				.line {
+					font-weight: 400;
+					font-size: $font-size-normal;
+					margin-bottom: 1em;
+					color: $color-gray1;
+					@include display-flex;
+					@include flex-wrap-wrap;
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-xxxxl-sp;
+						line-height: 1.7;
+					}
+					
+					.radio-label {
+						color: inherit;
+
+						+ .radio-label {
+							margin-left: 0.8em;
+						}
+					}
+				}
+
+				span, p {
+					font-family: $font-family-text;
+					font-weight: 400;
+					font-size: $font-size-normal;
+					line-height: 2;
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-xxxxl-sp;
+						line-height: 1.5;
+					}
+				}
+
+				input[type=text], input[type=email], input[type=tel] {
+					width: 100%;
+					padding: 1em 1.5em;
+					border: 1px solid $color-gray5;
+					color: $color-gray1;
+					font-size: $font-size-normal;
+					@media screen and (max-width: 768px) {
+						padding: 1em 0.7em;
+						font-size: $font-size-xxxxl-sp;
+					}
+
+					&:focus {
+						border-color: $color-gray1;
+					}
+
+					&::placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder {
+						color: $color-gray6;
+					}
+
+					&::placeholder {
+						opacity: 1;
+					}
+				}
+
+				textarea {
+					width: 100%;
+					padding: 1em 1.5em;
+					border: 1px solid $color-gray5;
+					color: $color-gray1;
+					font-size: $font-size-normal;
+					line-height: 1.5;
+					@media screen and (max-width: 768px) {
+						padding: 1em 0.7em;
+						font-size: $font-size-xxxxl-sp;
+					}
+
+					&:focus {
+						border-color: $color-gray1;
+					}
+				}
+			}
+		}
+
+		.btn-panel {
+			text-align: center;
+			padding-top: 5em;
+			@media only screen and (max-width: 768px) {
+				padding-left: 8.33vw;
+				padding-right: 8.33vw;
+			}
+
+			a {
+				display: block;
+				font-size: $font-size-normal;
+				margin: 0 auto;
+				width: 360px;
+				line-height: 5;
+				@media only screen and (max-width: 768px) {
+					font-size: $font-size-xxxxl-sp;
+					line-height: 3.6;
+					width: 100%;
+				}
+
+				&:not(.btn) {
+					&:hover {
+						text-decoration: underline !important;
+					}
+				}
+
+				&.btn {
+					line-height: 5;
+					border-radius: 2.5em;
+					background: $color-blue2;
+					color: $color-white;
+					font-size: $font-size-xxl;
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-xxxxxl-sp;
+						line-height: 3.6;
+						border-radius: 1.8em;
+					}
+
+					&:hover {
+						background: $color-white;
+						color: $color-gray1;
+					}
+
+					&.btn--gray {
+						background: $color-gray4;
+						color: $color-gray1;
+						font-size: $font-size-normal;
+
+						&:hover {
+							background: $color-blue2;
+							color: $color-white;
+						}
+					}
+				}
+			}
+		}
 	}
 }

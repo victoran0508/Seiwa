@@ -11,6 +11,44 @@
 	overflow: visible;
 	height: 70px;
 
+    a.contact-link {
+	    @include flex-center;
+	    @include flex-direction-column;
+	    width: 210px;
+		height: 105px;
+		padding-left: 35px;
+		border-radius: 0 0 0 35px;
+		@media only screen and (max-width: 1024px) {
+			width: 140px;
+			padding-left: 15px;
+			border-radius: 0 0 0 35px;
+		}
+	    background-color: $color-blue1;
+		color: $color-menu-white;
+	    text-align: center;
+		font-size: $font-size-menu-contact;
+		@media only screen and (max-width: 768px) {
+			font-size: $font-size-menu-contact-sp;
+			padding-left: unset;
+		}
+		z-index: 9;
+
+	    i {
+			font-size: $font-size-xxxxl;
+			margin-bottom: 0.5em;
+			@media only screen and (max-width: 768px) {
+				font-size: $font-size-xxxxxxxl-sp;
+				margin-bottom: unset;
+				margin-right: 1em;
+			}
+		}
+
+		span {
+			font: $font-poppins;
+			color: $color-menu-white;
+		}
+	}
+
 	.nav {
 		@include flex(1 1 auto);
 		@include display-flex;
@@ -135,44 +173,6 @@
 			}
 		}
 	}
-
-    a.contact-link {
-	    @include flex-center;
-	    @include flex-direction-column;
-	    width: 210px;
-		height: 105px;
-		padding-left: 35px;
-		border-radius: 0 0 0 35px;
-		@media only screen and (max-width: 1024px) {
-			width: 140px;
-			padding-left: 15px;
-			border-radius: 0 0 0 35px;
-		}
-	    background-color: $color-blue1;
-		color: $color-menu-white;
-	    text-align: center;
-		font-size: $font-size-menu-contact;
-		@media only screen and (max-width: 768px) {
-			font-size: $font-size-menu-contact-sp;
-			padding-left: unset;
-		}
-		z-index: 9;
-
-	    i {
-			font-size: $font-size-xxxxl;
-			margin-bottom: 0.5em;
-			@media only screen and (max-width: 768px) {
-				font-size: $font-size-xxxxxxl-sp;
-				margin-bottom: unset;
-				margin-right: 1em;
-			}
-		}
-
-		span {
-			font: $font-poppins;
-			color: $color-menu-white;
-		}
-	}
 }
 
 .nav-open {
@@ -196,7 +196,7 @@
 	    left: 0;
 	    right: 0;
 	    height: 0;
-	    display: block;
+	    display: none;
 	    padding: 0 14vw 20vw;
     	overflow-y: auto;
 	    opacity: 0;
@@ -208,18 +208,14 @@
 	    a.contact-link {
 		    width: auto;
 		    margin: 0;
-		    font-size: $font-size-xxxxl-sp;
+		    font-size: $font-size-xxxxxl-sp;;
 			line-height: 3.6;
 			height: auto;
 			border-radius: 1.8em;
 			margin-bottom: 6vw;
 			@include flex-direction-row;
 
-		    i {
-		    	// display: none;
-		    }
-
-			span {
+		    span {
 				color: $color-menu-white;
 				display: unset;
 			}
@@ -238,7 +234,7 @@
 		@include justify-content-center;
 		@include flex-direction-column;
 
-	    i {
+		i {
 	    	position: relative;
 	    	display: block;
 	    	height: 0;
@@ -280,7 +276,20 @@
 			background-color: $color-blue2;
 	    }
 
+		&::before {
+			content: "";
+			position: fixed;
+			display: block;
+			left: 0;
+			top: 0;
+			height: 100vh;
+			width: 100vw;
+			background: $color-white;
+			z-index: 1;
+		}
+
 	    .nav-wrapper {
+			display: block;
 	    	height: calc(100vh - 29.33vw);
 	    	opacity: 1;
 			border-radius: 0 0 10px 10px;
@@ -292,7 +301,7 @@
 			display: block;
 			position: relative;
 			color: #fff;
-			font-size: $font-size-xxxxl-sp;
+			font-size: $font-size-xxxxxl-sp;;
 			margin: 0;
 
 			&:hover > a {
@@ -344,15 +353,17 @@
 				&:before {
 					content: '+';
 					font-family: Arial;
-					font-size: $font-size-xxxxxxxl-sp;
+					font-size: $font-size-xxxxxxxxl-sp;
 					font-weight: 400;
 					display: block;
 					@include transition-all;
 				}
 
 				&.opened:before {
-					@include transform(rotate(180deg));
-					content: "-";
+					@include transform(rotate(90deg));
+					font-size: $font-size-xxxxl-sp;
+					font-weight: bold;
+					content: "|";
 				}
 			}
 		}
@@ -361,6 +372,14 @@
 	.nav-open i {
 		&, &:after, &:before {
 			@include transition-all;
+		}
+	}
+
+	body:not(.nav-opened) {
+		.nav-wrapper {
+			a {
+				pointer-events: none;
+			}
 		}
 	}
 

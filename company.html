@@ -1,0 +1,509 @@
+<!-- HTMLコード -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./libs/slick/slick.css">
+    <link rel="stylesheet" href="./libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- javascript -->
+    <script src="./libs/jquery/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo"><img src="./assets/img/logo.png" alt="" /></a>
+            <a href="javascript:void(0)" class="nav-open"><i></i><span>MENU</span></a>
+            <div class="nav-wrapper">
+                <a href="inquiry.html" class="contact-link"><i class="fa fa-envelope" aria-hidden="true"></i><span>CONTACT</span></a>
+                <ul class="nav">
+                    <li><a href="company.html">会社概要</a></li>
+                    <li>
+                        <a href="#">取扱製品</a>
+                        <a href="javascript:void(0)" class="submenu-opener"></a>
+                        <div class="menu-popup">
+                            <div class="container">
+                                <div class="popup-inner">
+                                    <ul>
+                                        <li>
+                                            <a href="#">食品添加物</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">食品添加物製剤</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">香辛料</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">一般食品・機能性食品素材</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="recruit.html">採用情報</a></li>
+                    <li><a href="#">オンラインショップ</a></li>
+                    <li><a href="#">楽天市場</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="page-wrapper">
+        <section class="breadcrumb">
+            <div class="section-content">
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><span>会社概要</span></li>
+                  </ul>
+            </div>
+        </section>
+        <section class="main-image">
+            <div class="section-title">
+                <h3>COMPANY<span>会社概要</span></h3>
+            </div>
+            <div class="section-content">
+                <figure class="main-image">
+                    <img class="img" src="./assets/img/bridge.png">
+                </figure>
+                <div class="intro">
+                    <p>「お客様が何を求めているか？<br class="sp">そのニーズにどう答えるか？」<br>
+                        星和は常にこのことを念頭に置き、<br class="sp">ジャンルにとらわれない発想で邁進して参ります。<br>
+                        星和が誕生した20年前、<br class="sp">中国の食品添加物は未知の存在でした。<br>
+                        ここに着目し安心でコストメリットのある製品を<br class="sp">皆様へお届けしようと考えました。<br>
+                        これが星和の出発点です。<br class="sp">そして今、分野の垣根を取りはらい<br class="sp">様々なことにチャレンジしております。<br>
+                        これからの星和にご期待下さい。
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="greeting">
+            <div class="section-title">
+                <h3>ご挨拶</h3>
+            </div>
+            <div class="section-content">
+                <figure class="ceo">
+                    <img class="img" src="./assets/img/boss.png">
+                </figure>
+                <div class="message">
+                    <p class="txt">
+                        「日本に安全な輸入食品添加物を」という理念の下、私たちは1997年に星和株式会社を設立しました。そして、私たちの理念をさらに徹底させるため、中国に貿易、製造拠点を確立致しました。中国に拠点を持つことで、健康食品や輸入酒など取り扱いの範囲が広がり、取引国も中国のみならずアジア各国に広がり、お客様の貿易のお手伝いもさせていただくようになりました。そして日本国内だけでなく、海外でお会いしたお客さまを通して実感したことは「食品に国境なし」ということです。
+                    </p>
+                    <p class="txt">
+                        食品に国境がないのなら、私たちの取り扱うものはすべての人々に安全でなければならない。「国境のない食品」を「安全な形」でお届けするために私たちの思いはこれからも変わりません。
+                    </p>
+                    <div class="name-position">
+                        <p>
+                            <span class="position">代表取締役</span>
+                            <span class="name">弓長 可人</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="report">
+            <div class="top-links">
+                <div class="item">
+                    <a href="#strength-of-company"><span>商社の強み</span></a>
+                </div>
+                <div class="item">
+                    <a href="#strength-of-manufacturer"><span>メーカーの強み</span></a>
+                </div>
+                <div class="item">
+                    <a href="#familiar-with-china-situation"><span>中国情勢に熟知</span></a>
+                </div>
+                <div class="item">
+                    <a href="#stable-supply"><span>安定供給</span></a>
+                </div>
+            </div>
+            <div class="detail-item">
+                <h4 id="strength-of-company">商社の強み</h4>
+                <p>
+                    ・輸入品でも混載(細かい)対応が可能 ・中国現地に自社工場があり、日本の品質管理基準のもと品質確認が可能です。<br>
+                    ・中国現地に原料購買拠点があり、食品添加物・香辛料の専門知識と原料調達力がある。<br>
+                    ・日本、中国、また第三国でも同スペックの商品供給が可能です。
+                </p>
+            </div>
+            <div class="detail-item">
+                <h4 id="strength-of-manufacturer">メーカーならではの強み</h4>
+                <p>
+                    ・当社の一番の特⻑は、中国に自社工場があることです。<br>
+                    ・自社工場は、添加物の工場と香辛料の工場があります。<br>
+                    (添加物)<br>
+                    ・添加物の工場は当初、検品工場としてスタートしました。<br>
+                    ・中国の原料メーカーから来る原料の品質チェック(濾過試験等)を行い自社工場で検品を行うことで、国産と同等品質の商品を輸入することが可能に! <br>
+                    ・国産と同等品質で、国産より値段が安くご案内できます。 <br>
+                    ・弊社工場はお客様の要望にお応えすべく設備を拡張してきました。
+                </p>
+                <p>
+                    ▶作業現場での作業性を考慮した小分け包装品<br>
+                    ▶粒度を均一に調整<br>
+                    ▶溶解性を良くする為に造粒した顆粒品<br>
+                    ▶粉末飲料の OEM<br>
+                    ▶顧客の指定配合通りに製剤化計量にかかる人件費削減、資材発注・管理の手間削減、誤計量防止、原料廃棄ロス削減<br>
+                    ▶自社オリジナル商品として、複数の特許商品も製造
+                </p>
+                <p>末端商品では、冷凍食品、コンビニ弁当やスーパーの総菜などに良く使われております。</p>
+                <p>
+                    また、中国メーカーの品質向上に伴い、VC・VCNa やグリシンはストレート品の取扱いも開始。<br>
+                    その商品も、毎回弊社の品管が現場に入って生産に立ち会って、品質チェックから出荷まで見届けて品質担保を行っています。
+                </p>
+                <p>
+                    香辛料の工場は、当社お客様のご要望に応える為スタートしました。<br>
+                    中国現地で製造、最終製品を日本へ輸出する大手日系企業様より、日本の基準をクリアできる殺菌方法で菌数コントロールをした香辛料を供給して欲しいとの要望に応えるべく設立。<br>
+                    ・中国の原料メーカーから来る原料の品質チェック(比重選別、目視選別)を行い 自社工場で検品、加工を行うことで、国産と同等品質の商品を輸入することが可能に! <br>
+                    ・国産と同等品質で、国産より値段が安くご案内できます。
+                </p>
+                <p>
+                    ▶肥料、栽培記録を管理しトレースの取れる原料を使用<br>
+                    ▶蒸気殺菌<br>
+                    ▶スライス、粗挽き、パウダーなど形状加工<br>
+                    ▶顧客の指定配合通りのスパイスミックスやシーズニングの製造<br>
+                    ▶要望に応じた荷姿に加工<br>
+                    ▶日本の香辛料メーカーよりも特に、中国主産の、唐辛子、ガーリック、オニオン、シナモン、ターメリック等が得意としております。
+                </p>
+            </div>
+            <div class="detail-item">
+                <h4 id="familiar-with-china-situation">
+                    中国情勢に強い
+                </h4>
+                <p>
+                    弊社は、自社工場と上海に原料仕入れ拠点があります。常に原料動向の情報把握に努めている。
+                </p>
+            </div>
+            <div class="detail-item">
+                <h4 id="stable-supply">安定供給</h4>
+                <p>
+                    原料仕入先は現在約 150 社あります。仕入先との関係構築、リスクヘッジで原料ソースを複数持つことにより、正しい原料情報が掴みやすく、早めに原料確保を行う等原料調達力に強みを持ち、価格・供給面ともに安定供給に努めている。
+                </p>
+                <p>
+                    中国における日系企業様との取組みは、ノウハウ管理という面でも信頼を頂いております。<br>
+                    日本で守秘義務契約を結び、弊社工場をブラックボックスにして頂き、指示配合通りに製剤 化したものを顧客の現地協力工場へ納品しており各種製剤(調味料、品質改良、日持、甘味 料、かんすい、乳化剤、ゲル化剤など)を納品させて頂いております。
+                </p>
+            </div>
+        </section>
+        <section class="headquarter">
+            <div class="section-title">
+                <h3>本社/事業所</h3>
+            </div>
+            <div class="section-content">
+                <div class="office">
+                    <figure class="building-image">
+                        <img class="img" src="./assets/img/building.png">
+                    </figure>
+                    <div class="info">
+                        <div class="item">
+                            <div class="field-name">
+                                <span>創業</span>
+                            </div>
+                            <div class="field-value">
+                                <p>1997年(平成9年)</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="field-name">
+                                <span>資本金</span>
+                            </div>
+                            <div class="field-value">
+                                <p>1億円</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="field-name">
+                                <span>代表取締役</span>
+                            </div>
+                            <div class="field-value">
+                                <p>弓長 可人</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="field-name">
+                                <span>事業所</span>
+                            </div>
+                            <div class="field-value">
+                                <p>【本社】<br>〒140-0004<br>東京都品川区南品川 4-3-5 星和南品川ビル2F</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="field-name">
+                                <span>事業内容</span>
+                            </div>
+                            <div class="field-value">
+                                <p>食品添加物・香辛料・食品及び食品原材料・輸入酒などの貿易・国内販売・貿易業務代行・貿易コンサルティング</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="field-name">
+                                <span>取引銀行</span>
+                            </div>
+                            <div class="field-value">
+                                <p>三井住友銀行、みずほ銀行、東日本銀行</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map">
+                    <div class="iframe">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.5703196704276!2d139.73906826555293!3d35.61366428021008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188a657161cbaf%3A0x82da497c2ed1e696!2z44CSMTQwLTAwMDQg5p2x5Lqs6YO95ZOB5bed5Yy65Y2X5ZOB5bed77yU5LiB55uu77yT4oiS77yVIOaYn-WSjOWNl-WTgeW3neODk-ODqw!5e0!3m2!1sja!2sjp!4v1499916407740" width="920" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    </div>
+                    <div class="txt">
+                        <div class="item">
+                            <div class="field-name">
+                                <span>所在地</span>
+                            </div>
+                            <div class="field-value">
+                                <span>〒140-0004　東京都品川区南品川4-3-5　星和南品川ビル</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="field-name">
+                                <span>電話</span>
+                            </div>
+                            <div class="field-value">
+                                <span>03-5781-9881（代）</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="field-name">
+                                <span>交通</span>
+                            </div>
+                            <div class="field-value">
+                                <span>京浜急行電鉄線　新馬場駅南口出口より徒歩3分 / JR京浜東北線・りんかい線・東急大井町線　大井町駅より徒歩10分</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="history">
+            <div class="section-title">
+                <h3>沿革</h3>
+            </div>
+            <div class="section-content">
+                <div class="item">
+                    <div class="field-name">
+                        <span>1997年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            大阪市にて星和株式会社設立<br>
+                            資本金1,000万円<br>
+                            弓長可人代表取締役就任<br>
+                            食品添加物、食品素材の輸入販売開始<br>
+                            甘草・ステビア・グリシン・DL-アラニン輸入販売開始
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>1998年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>サッカリンナトリウム、ソルビン酸カリウム輸入販売開始</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>1999年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            レバウディオサイドA高含有ステビア販売開始<br>
+                            食糧新聞掲載<br>
+                            ifia JAPAN 国際食品素材/添加物展に初出展
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2000年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            ビタミンC 及びビタミンC ナトリウム、エリソルビン酸ナトリウム輸入販売開始
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2001年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            東京営業所、福岡営業所設立<br>
+                            D-キシロース、キシリトール輸入販売開始
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2002年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            中国に貿易、製造拠点を確立<br>
+                            自社ブランド食品添加物販売開始
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2003年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            カテキン輸入販売開始
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2004年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            資本金を１億円に増資<br>
+                            福岡営業所と東京営業所を本社と統合し、本社を東京へ移転<br>
+                            日持向上剤「VHシリーズ」販売開始<br>
+                            日持向上剤「Gキープシリーズ」販売開始<br>
+                            FIC（中国国際食品添加剤和配料展覧会）初出展<br>
+                            中国国内の日本企業へ原料供給開始
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2005年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            香辛料の販売開始
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2006年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            「粉末醸造酢とその製造方法」で特許取得<br>
+                            リン酸塩代替品「SU-21シリーズ」販売開始
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2007年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            粉末飲料のOEM製造開始
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2008年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            「こんにゃくの利用方法」で特許取得<br>
+                            品質改良剤「結着マンナンシリーズ」販売開始<br>
+                            酢酸ナトリウム、リン酸塩製剤輸入販売開始
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2013年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            本社を現住所へ移転
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2014年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            本社に試作開発室を設置
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2015年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            中国仕入先との情報ネットワーク拡大<br>
+                            主要原料仕入先約100社、中国現地販売先約120社にのぼる
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2016年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            ifia JAPAN 国際食品素材/添加物展18年連続出展<br>
+                            FIC（中国国際食品添加剤和配料展覧会）13年連続出展
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="field-name">
+                        <span>2017年</span>
+                    </div>
+                    <div class="field-value">
+                        <span>
+                            創業20年を迎える
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="page-footer">
+        <div class="footer-top">
+            <div class="footer-middle">
+                <div class="container">
+                    <a href="index.html" class="logo"><img src="./assets/img/logo.png" alt="" /></a>
+                    <ul class="footer-links">
+                        <li><a href="company.html">会社概要</a></li>
+                        <li><a href="#">取扱製品</a></li>
+                        <li><a href="recruit.html">採用情報</a></li>
+                        <li><a href="#">オンラインショップ</a></li>
+                        <li><a href="#">楽天市場</a></li>
+                        <li><a href="inquiry.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">© 2021 SEIWA GROUP. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./libs/slick/slick.min.js"></script>
+    <script src="./assets/js/theme.js"></script>
+</body>
+</html>
