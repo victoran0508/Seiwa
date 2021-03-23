@@ -231,7 +231,7 @@ section.hero {
 	}
 
     h2 {
-    	font-family: $font-ryumin-pro;
+    	font-family: $font-noto-serif-cj-kjp;
 	    font-size: $font-size-xxxxl;
 		@media only screen and (max-width: 768px) {
 			font-size: $font-size-xxxxxl-sp;;
@@ -241,7 +241,7 @@ section.hero {
 	}
 
 	p {
-		font-family: $font-ryumin-pro;
+		font-family: $font-noto-serif-cj-kjp;
 		font-size: $font-size-xxxxxxl;
 		@media only screen and (max-width: 768px) {
 			font-size: $font-size-xxxxxxxl-sp;
@@ -369,7 +369,7 @@ section.hero {
 					}
 
 					h4 {
-						font-family: $font-ryumin-pro;
+						font-family: $font-noto-serif-cj-kjp;
 						font-size: $font-size-xxxxxxxl;
 						@media only screen and (max-width: 1024px) {
 							padding-top: 1.7em;
@@ -1050,7 +1050,7 @@ section.hero {
 	}
 }
 
-.main-image {
+.main-header {
 	.section-title h3 {
 		margin-top: 1em;
 		text-align: center;
@@ -1079,6 +1079,109 @@ section.hero {
 					font-size: $font-size-intro-sp;
 					line-height: 1.5;
 					margin-top: 2em;
+				}
+			}
+		}
+
+		.keyword-input {
+			@extend .w1000;
+			position: relative;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			@media only screen and (max-width: 768px) {
+				padding-left: 5.33vw;
+				padding-right: 5.33vw;
+				padding-top: 10vw;
+				padding-bottom: 10vw;
+			}
+
+			@include display-flex;
+			@include flex-direction-column;
+			@include align-items-center;
+
+			.input {
+				position: relative;
+				margin-bottom: 2em;
+				width: 720px;
+				@media only screen and (max-width: 768px) {
+					width: 100%;
+				}
+				input {
+					border-radius: 2em;
+					padding: 1.5em 3em;
+					font-size: $font-size-xxl;
+					
+					@media only screen and (max-width: 768px) {
+						padding: 1.2em 1.7em;
+						font-size: $font-size-xxxxxl-sp;
+						border-radius: 1.7em;
+					}
+					position: relative;
+				}
+
+				button {
+					position: absolute;
+					right: 1.5em;
+					top: 50%;
+					transform: translateY(-50%);
+					font-size: $font-size-xxl;
+					@media only screen and (max-width: 768px) {
+						right: 1.2em;
+						font-size: $font-size-xxxxxl-sp;
+					}
+					border: none;
+					background: transparent;
+					color: $color-gray1;
+
+					&:hover {
+						opacity: 0.8;
+					}
+				}
+			}
+
+			.keyword-list {
+				width: 720px;
+				@media only screen and (max-width: 768px) {
+					width: 100%;
+				}
+				list-style: none;
+				@include display-flex;
+				@include justify-content-center;
+				@include flex-wrap-wrap;
+
+				li {
+					font-size: $font-size-l;
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-xxxl-sp;
+					}
+					line-height: 2.5;
+					margin-left: 1.5em;
+					margin-right: 1.5em;
+
+					a {
+						cursor: pointer;
+
+						&:hover {
+							color: $color-blue2;
+						}
+					}
+				}
+			}
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 3.33vw;
+				right: 3.33vw;
+				top: 0;
+				bottom: 0;
+				background: $color-gray4;
+				z-index: -1;
+				border-radius: 10px;
+				@media only screen and (max-width: 768px) {
+					left: -10vw;
+					right: -10vw;
 				}
 			}
 		}
@@ -1737,7 +1840,6 @@ section.hero {
 }
 
 .inquiry {
-
 	padding-top: 100px;
 	@media only screen and (max-width: 768px) {
 		padding-top: 12vw;
@@ -1917,47 +2019,6 @@ section.hero {
 						line-height: 1.5;
 					}
 				}
-
-				input[type=text], input[type=email], input[type=tel] {
-					width: 100%;
-					padding: 1em 1.5em;
-					border: 1px solid $color-gray5;
-					color: $color-gray1;
-					font-size: $font-size-normal;
-					@media screen and (max-width: 768px) {
-						padding: 1em 0.7em;
-						font-size: $font-size-xxxxl-sp;
-					}
-
-					&:focus {
-						border-color: $color-gray1;
-					}
-
-					&::placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder {
-						color: $color-gray6;
-					}
-
-					&::placeholder {
-						opacity: 1;
-					}
-				}
-
-				textarea {
-					width: 100%;
-					padding: 1em 1.5em;
-					border: 1px solid $color-gray5;
-					color: $color-gray1;
-					font-size: $font-size-normal;
-					line-height: 1.5;
-					@media screen and (max-width: 768px) {
-						padding: 1em 0.7em;
-						font-size: $font-size-xxxxl-sp;
-					}
-
-					&:focus {
-						border-color: $color-gray1;
-					}
-				}
 			}
 		}
 
@@ -2012,6 +2073,411 @@ section.hero {
 						&:hover {
 							background: $color-blue2;
 							color: $color-white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.main-panel {
+	@extend .w1000;
+
+	padding-top: 100px;
+	padding-bottom: 100px;
+	@include display-flex;
+	@media only screen and (max-width: 768px) {
+		padding-top: 12vw;
+		padding-bottom: 12vw;
+		@include flex-direction-column;
+		padding-left: 5.33vw;
+		padding-right: 5.33vw;
+	}
+
+	.center-box {
+		@include flex(1 1 auto);
+		padding-right: 60px;
+		@media only screen and (max-width: 768px) {
+			@include flex(unset);
+			padding-right: unset;
+		}
+
+		.section-banner {
+			position: relative;
+
+			.img {
+				width: 100%;
+			}
+
+			.caption {
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				@include display-flex;
+				@include justify-content-center;
+				@include align-items-center;
+
+				h4 {
+					text-align: center;
+					color: $color-white;
+					font-family: $font-poppins;
+					line-height: 0.8;
+					font-size: $font-size-l;
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-xxxl-sp;
+					}
+
+					span {
+						display: block;
+						font-family: $font-sans;
+						font-weight: bold;
+						line-height: 1.6;
+						font-size: $font-size-xxxxl;
+						@media only screen and (max-width: 768px) {
+							font-size: $font-size-xxxxxxl-sp;
+						}
+					}
+				}
+			}
+		}
+
+		> dl {
+			> dt {
+				color: $color-black;
+				font-weight: bold;
+				line-height: 1;
+				margin-top: 3em;
+				margin-bottom: 1.2em;
+				font-size: $font-size-dt;
+				@media only screen and (max-width: 768px) {
+					font-size: $font-size-dt-sp;
+				}
+
+				h3 {
+					color: $color-black;
+					font-weight: bold;
+					margin-bottom: 0.5em;
+					font-size: $font-size-main-panel-title;
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-main-panel-title-sp;
+					}
+				}
+
+				span {
+					line-height: 2;
+					color: $color-blue2;
+					font-size: $font-size-s;
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-xxxl-sp;
+					}
+					border-radius: 1em;
+					border: 1px solid $color-blue2;
+					padding-left: 1em;
+					padding-right: 1em;
+				}
+
+				&.box-title {
+					border-bottom: 1px dotted $color-gray2;
+					padding-bottom: 1em;
+					margin-top: unset;
+				}
+			}
+
+			> dd {
+				color: $color-gray1;
+				font-size: $font-size-dd;
+				@media only screen and (max-width: 768px) {
+					font-size: $font-size-dd-sp;
+				}
+
+				p {
+					line-height: 2;
+					margin-top: 2em;
+				}
+
+				.category-list {
+					list-style: none;
+					@include display-flex;
+					@include justify-content-flex-start;
+					@include flex-wrap-wrap;
+					margin-left: -9px;
+					margin-right: -9px;
+
+					li {
+						@include flex(25%);
+						max-width: calc(25% - 1em);
+						margin-top: 1em;
+						margin-left: 0.5em;
+						margin-right: 0.5em;
+						font-size: $font-size-category-anchor;
+						@media only screen and (max-width: 768px) {
+							font-size: $font-size-category-anchor-sp;
+							@include flex(50%);
+							max-width: calc(50% - 1em);
+						}
+
+						a {
+							line-height: 4;
+							border-radius: 2em;
+
+							&:hover {
+								background: $color-gray4;
+								color: $color-black;
+							}
+						}
+					}
+				}
+
+				.product-list {
+					list-style: none;
+					@include display-flex;
+					@include justify-content-space-between;
+					@include flex-wrap-wrap;
+					margin-top: 3em;
+
+					li {
+						@include flex(49%);
+						max-width: 49%;
+						margin-top: 1em;
+						font-size: $font-size-category-anchor;
+						@media only screen and (max-width: 768px) {
+							font-size: $font-size-category-anchor-sp;
+						}
+
+						dl {
+							dt {
+								cursor: pointer;
+
+								.product-image {
+									.img {
+										width: 100%;
+										position: relative;
+									}
+
+									.caption {
+										color: $color-gray1;
+										font-weight: bold;
+										margin-top: 1em;
+										margin-bottom: 1em;
+										font-size: $font-size-product-image-caption;
+										@media only screen and (max-width: 768px) {
+											font-size: $font-size-product-image-caption-sp;
+										}
+									}
+								}
+							}
+
+							dd {
+								margin-bottom: 2em;
+
+								span {
+									line-height: 2;
+									color: $color-blue2;
+									font-size: $font-size-s;
+									@media only screen and (max-width: 768px) {
+										font-size: $font-size-xxxl-sp;
+									}
+									border-radius: 1em;
+									border: 1px solid $color-blue2;
+									padding-left: 1em;
+									padding-right: 1em;
+								}
+							}
+						}
+
+						&:hover {
+							.img::after {
+								display: block;
+							}
+
+							figcaption {
+								text-decoration: underline;
+								color: $color-blue2;
+							}
+						}
+					}
+				}
+
+				&.btn-panel {
+					text-align: center;
+					margin-top: 4em;
+					margin-bottom: 4em;
+					font-size: $font-size-category-anchor;
+					@media only screen and (max-width: 768px) {
+						font-size: $font-size-category-anchor-sp;
+					}
+
+					a {
+						line-height: 4;
+						border-radius: 2em;
+						background: $color-blue1;
+
+						&:hover {
+							background: $color-gray4;
+							color: $color-black;
+						}
+					}
+				}
+
+				.page-navigator {
+					margin-top: 2em;
+					@include display-flex;
+					@include justify-content-center;
+					list-style: none;
+					@media only screen and (max-width: 768px) {
+						@include justify-content-space-between;
+					}
+
+					&.button-3 {
+						@include justify-content-space-between;
+					}
+
+					li {
+						position: relative;
+						display: block;
+						width: 3em;
+						font-family: $font-poppins;
+						text-align: center;
+						cursor: pointer;
+						font-size: $font-size-xxl;
+						@media only screen and (max-width: 768px) {
+							font-size: $font-size-xxxxxxl-sp;
+						}
+
+						&:not(.flat):after {
+							content: "";
+							position: absolute;
+							display: none;
+							height: 2em;
+							width: 2em;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							background: $color-blue2;
+							border-radius: 1em;
+							z-index: -1;
+						}
+
+						&:not(.flat):not(.disabled) {
+							&:hover {
+								color: $color-white;
+
+								&:after {
+									display: block;
+								}
+							}
+						}
+
+						&.disabled {
+							cursor: default;
+						}
+
+						&.selected {
+							color: $color-white;
+							font-weight: bold;
+
+							&:after {
+								display: block;
+							}
+						}
+
+						&.flat {
+							width: unset;
+							font-size: $font-size-xs;
+							@media only screen and (max-width: 768px) {
+								font-size: $font-size-xxxxl-sp;
+							}
+
+							&:hover {
+								text-decoration: underline !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.sidebar {
+		@include flex(0 0 170px);
+		@media only screen and (max-width: 768px) {
+			@include flex(unset);
+			margin-top: 10vw;
+		}
+
+		> dl {
+			> dt {
+				font-family: $font-poppins;
+				color: $color-black;
+				line-height: 1;
+				font-size: $font-size-xxxl;
+				@media only screen and (max-width: 768px) {
+					font-size: $font-size-xxxxxxl-sp;
+				}
+				margin-bottom: 1.2em;
+			}
+
+			> dd {
+				.main-category {
+					list-style: none;
+
+					> li {
+						> dl {
+							> dt {
+								font-size: $font-size-normal;
+								@media only screen and (max-width: 768px) {
+									font-size: $font-size-xxxxxl-sp;
+								}
+								line-height: 2.8;
+								
+								@include display-flex;
+								@include justify-content-space-between;
+								
+								&.expanded {
+									span {
+										transform: rotate(-90deg);
+									}
+								}
+
+								&.collapsed {
+									span {
+										transform: rotate(90deg);
+									}
+								}
+
+								a {
+									font-weight: bold;
+									&:hover {
+										color: $color-blue2;
+										text-decoration: underline !important;
+									}
+								}
+							}
+
+							> dd {
+								.sub-category {
+									list-style: outside;
+									margin-left: 3.5em;
+									margin-bottom: 3em;
+									li {
+										font-size: $font-size-normal;
+										@media only screen and (max-width: 768px) {
+											font-size: $font-size-xxxxl-sp;
+										}
+										line-height: 2.2;
+
+										a {
+											&:hover {
+												color: $color-blue2;
+												text-decoration: underline !important;
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}

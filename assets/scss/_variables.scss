@@ -24,7 +24,7 @@ $color-header: $color-gray2;
 // フォント
 $font-sans: "Noto Sans CJK JP";
 $font-poppins: "Poppins";
-$font-ryumin-pro: "RyuminPro";
+$font-noto-serif-cj-kjp: "Noto Serif CJ Kjp";
 $font-noto-serif: "NotoSerifJP";
 
 $font-family-text: $font-sans;
@@ -65,6 +65,11 @@ $font-size-section-title: $font-size-xxxxxxl;
 $font-size-section-title-small: $font-size-normal;
 $font-size-intro: $font-size-normal;
 $font-size-breadcrumb: $font-size-xs;
+$font-size-dt: 20px;
+$font-size-dd: $font-size-normal;
+$font-size-category-anchor: 18px;
+$font-size-product-image-caption: 16px;
+$font-size-main-panel-title: 36px;
 
 $font-size-menu-sp: $font-size-normal-sp;
 $font-size-menu-contact-sp: $font-size-s-sp;
@@ -74,6 +79,11 @@ $font-size-section-title-sp: $font-size-xxxxxxxxxl-sp;
 $font-size-section-title-small-sp: $font-size-xxxxxl-sp;;
 $font-size-intro-sp: $font-size-xxxxl-sp;;
 $font-size-breadcrumb-sp: $font-size-xxxl-sp;
+$font-size-dt-sp: 4.5vw;
+$font-size-dd-sp: $font-size-xxxxl-sp;
+$font-size-category-anchor-sp: 3.5vw;
+$font-size-product-image-caption-sp: $font-size-xxxxl-sp;
+$font-size-main-panel-title-sp: $font-size-xxxxxxxl-sp;
 
 @mixin flex-center {
     @include display-flex();
