@@ -3,6 +3,10 @@
 /* 基礎のスタイル */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700|Noto+Serif+JP:400,500,600,700|Roboto:400,400i,500,500i,700,700i&display=swap&subset=japanese');
 /* @import url('../font/google/notosansjp/notosansjp.css'); */
+@font-face {
+    font-family: Mincho;
+    src: url(../font/MS-Mincho.ttf.woff);
+}
 
 * {
     margin: 0;
@@ -12,7 +16,7 @@
 
 body {
     position: relative;
-    font-family: "Noto Sans CJK JP", 'RyuminPro', 'Poppins', Arial, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif !important;
+    font-family: "Noto Sans CJK JP", 'Mincho', 'Poppins', Arial, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif !important;
     font-size: 10px;
     line-height: 1.5;
     overflow-x: hidden;
