@@ -226,6 +226,7 @@ section.hero {
     padding-left: 120px;
     z-index: 2;
     cursor: default;
+	pointer-events: none;
 
 	@media only screen and (max-width: 768px) {
 		padding-top: 10vw;
@@ -233,7 +234,7 @@ section.hero {
 	}
 
     h2 {
-    	font-family: $font-noto-serif-cj-kjp;
+    	font-family: $font-serif;
 	    font-size: $font-size-xxxxl;
 	    letter-spacing: -0.1em;
 		@media only screen and (max-width: 768px) {
@@ -244,7 +245,7 @@ section.hero {
 	}
 
 	p {
-		font-family: $font-noto-serif-cj-kjp;
+		font-family: $font-serif;
 		font-size: $font-size-xxxxxxl;
 		@media only screen and (max-width: 768px) {
 			font-size: $font-size-xxxxxxxl-sp;
@@ -374,7 +375,7 @@ section.hero {
 					}
 
 					h4 {
-						font-family: $font-noto-serif-cj-kjp;
+						font-family: $font-serif;
 						font-size: 42px;
 						@media only screen and (max-width: 1024px) {
 							padding-top: 1.7em;
@@ -555,10 +556,10 @@ section.hero {
 		background-size: cover;
 		background-attachment: fixed;
 		opacity: 0.5;
-// 		@include transform(translateZ(-100px) scale(1.2));
 		@media only screen and (max-width: 768px) {
 			top: calc(12vw + 2em);
 			bottom: 23vw;
+			background-attachment: scroll;
 		}
 	}
 }
@@ -1260,7 +1261,7 @@ section.hero {
 				p {
 					margin-left: auto;
 					.position {
-						font-family: $font-noto-serif;
+						font-family: $font-serif;
 						font-weight: 700;
 						font-size: $font-size-xxl;
 						line-height: 1;
@@ -1272,7 +1273,7 @@ section.hero {
 						margin-bottom: 0.8em;
 					}
 					.name {
-						font-family: $font-noto-serif;
+						font-family: $font-serif;
 						font-weight: 700;
 						font-size: $font-size-xxxxl;
 						line-height: 1;
